@@ -1,31 +1,62 @@
 # NexScan
-just a NexScan
+Yes, you should add a `README.md` file to explain how to use your project. Here’s a basic `README.md` template for **NexScan**:
 
-Here's how you can use **NexScan** to scan for vulnerabilities:
+---
+
+## **NexScan - Advanced Vulnerability Scanner**
+
+NexScan is an automated vulnerability scanner that gathers information about a target website or IP address, identifies potential security issues, and detects outdated software.
+
+### **Features**
+- Identifies technologies using **WhatWeb**
+- Resolves IP addresses
+- Runs **Nmap** with vulnerability detection
+- Extracts CVE information from Nmap results
+- Checks for missing **security headers**
+- Detects outdated **server software**
 
 ### **Installation**
-First, make sure you have the necessary dependencies installed:
+Ensure required dependencies are installed:
 ```bash
 sudo apt update
 sudo apt install nmap whatweb python3-pip
 pip3 install requests beautifulsoup4
 ```
 
-### **Usage Examples**
-1. **Scan a Website**
-   ```bash
-   python3 NexScan.py https://example.com
-   ```
-   This will:
-   - Identify technologies using **WhatWeb**
-   - Resolve the IP address
-   - Run **Nmap** with vulnerability detection
-   - Check for missing **security headers**
-   - Detect outdated **server software**
+### **Usage**
+#### **Scan a Website**
+```bash
+python3 NexScan.py https://example.com
+```
+- Detects technologies
+- Resolves IP address
+- Scans for vulnerabilities
+- Checks for missing security headers
+- Detects outdated software
 
-2. **Scan a Specific IP**
-   ```bash
-   python3 NexScan.py -i 192.168.1.1
-   ```
-   This will:
-   - Run **Nmap** on the specified IP to detect vulnerabilities.
+#### **Scan an IP Address**
+```bash
+python3 NexScan.py -i 192.168.1.1
+```
+- Runs **Nmap** vulnerability scan on the target IP.
+
+### **Example Output**
+```
+[*] Running WhatWeb...
+[+] Detected Technologies: Apache, PHP
+
+[+] IP Address: 192.168.1.10
+
+[*] Running Nmap Vulnerability Scan...
+[+] Found CVEs:
+ - CVE-2021-41773
+ - CVE-2020-11975
+
+[-] X-XSS-Protection is missing!
+[+] Server: Apache/2.2 (Outdated)
+```
+
+### **Contributing**
+Feel free to submit issues or contribute improvements to NexScan.
+
+---
