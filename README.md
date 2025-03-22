@@ -1,3 +1,4 @@
+
 # NexScan
 Yes, you should add a `README.md` file to explain how to use your project. Here’s a basic `README.md` template for **NexScan**:
 
@@ -60,3 +61,4 @@ python3 NexScan.py -i 192.168.1.1
 Feel free to submit issues or contribute improvements to NexScan.
 
 ---
+You are NOT allowed to fork, modify, or redistribute this repository without explicit permission from the owner.
